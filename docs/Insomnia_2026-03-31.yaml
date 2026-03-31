@@ -1,0 +1,274 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: S1_R3_R4 - AT2_PBE 2
+meta:
+  id: wrk_db375cba9886415aac364b2f9a09d2e2
+  created: 1774964050929
+  modified: 1774983577747
+  description: ""
+collection:
+  - name: Categorias
+    meta:
+      id: fld_be95a554ccff4f6ba6c81121dae3266d
+      created: 1774975839982
+      modified: 1774975839982
+      sortKey: -1774975839982
+      description: ""
+    children:
+      - url: localhost:8000/categorias
+        name: Listar Categorias
+        meta:
+          id: req_4e00b0c036214c8cb9e159693c747c45
+          created: 1774964050964
+          modified: 1774975850880
+          isPrivate: false
+          description: ""
+          sortKey: -1774975845044
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias
+        name: Criar Categorias
+        meta:
+          id: req_9d04cf0b2ba2413db11fdb7e61fdff09
+          created: 1774964517609
+          modified: 1774975848705
+          isPrivate: false
+          description: ""
+          sortKey: -1774975844944
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Cosméticos", 
+            	"descricao": "Perfume importado doce"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias/1
+        name: Atualizar Categorias
+        meta:
+          id: req_a274372da8164fcab6bbdb66600da1a4
+          created: 1774964772731
+          modified: 1774975846686
+          isPrivate: false
+          description: ""
+          sortKey: -1774975844844
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Produtos de Beleza", 
+            	"descricao": "Maquiagem Beautiful"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias/1
+        name: Deletar Categorias
+        meta:
+          id: req_dee02c894cb74bedbaa22f44f54733ac
+          created: 1774969824936
+          modified: 1774975844787
+          isPrivate: false
+          description: ""
+          sortKey: -1774975844744
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Produtos
+    meta:
+      id: fld_40ff6d5af6e549cd99af0f42425e9070
+      created: 1774975859989
+      modified: 1774975859989
+      sortKey: -1774975859989
+      description: ""
+    children:
+      - url: localhost:8000/produtos
+        name: Listar Produtos
+        meta:
+          id: req_b921a4ecd4b7441bbbd38bcd9a7dcc00
+          created: 1774975864847
+          modified: 1774978974480
+          isPrivate: false
+          description: ""
+          sortKey: -1774975864847
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos
+        name: Criar Produtos
+        meta:
+          id: req_b46910ab7be049319e6b9c17afe80709
+          created: 1774978978944
+          modified: 1774981407468
+          isPrivate: false
+          description: ""
+          sortKey: -1774978978944
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: imagem
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\49212897860\Pictures\Screenshots\Captura de tela 2026-03-17
+                161040.png
+              type: file
+            - name: IdCategoria
+              value: "2"
+              description: ""
+              disabled: false
+            - name: Nome
+              value: Perfume Importado 2
+              description: ""
+              disabled: false
+            - name: Valor
+              value: "120.50"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos/2
+        name: Atualizar Produto
+        meta:
+          id: req_491c3aee405d4231ad812d3aa0465fdb
+          created: 1774980279536
+          modified: 1774981348318
+          isPrivate: false
+          description: ""
+          sortKey: -1774980279536
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            "IdCategoria": 2,
+            "Nome":"Perfume Frances ABAcate",
+            "Valor":"102.10"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos/2
+        name: Deletar Produto
+        meta:
+          id: req_87fbf2f6476440328a6e4e7c2c8f0068
+          created: 1774981426750
+          modified: 1774981448232
+          isPrivate: false
+          description: ""
+          sortKey: -1774981426750
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_8300761ff30c576ca81ebe0b49dbf33a77c817f5
+    created: 1774964050948
+    modified: 1774964050948
+environments:
+  name: Base Environment
+  meta:
+    id: env_8300761ff30c576ca81ebe0b49dbf33a77c817f5
+    created: 1774964050936
+    modified: 1774964050936
+    isPrivate: false
