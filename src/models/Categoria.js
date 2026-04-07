@@ -55,7 +55,6 @@ export class Categoria {
         }
     }
 
-    // Criação de objetos utilizando o Design Pattern FACTORY METHOD
     static criar(dados){
         return new Categoria(dados.nome, dados.descricao, null);
     }
