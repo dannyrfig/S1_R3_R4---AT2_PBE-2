@@ -1,14 +1,14 @@
-export class Cliente {
-    #idCliente;
-    #nome;
-    #cpf;
-    #dataCad;
+    export class Cliente {
+        #idCliente;
+        #nome;
+        #cpf;
+        #dataCad;
 
-    constructor(pNome, pCpf, pIdCliente) {
-        this.nome = pNome;
-        this.cpf = pCpf;
-        this.idCliente = pIdCliente;
-    }
+        constructor(pNome, pCpf, pIdCliente) {
+            this.nome = pNome;
+            this.cpf = pCpf;
+            this.idCliente = pIdCliente;
+        }
 
     get IdCliente() {
         return this.#idCliente;
