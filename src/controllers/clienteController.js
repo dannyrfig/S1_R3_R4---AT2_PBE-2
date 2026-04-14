@@ -8,7 +8,7 @@ const clienteController = {
 
    criar: async (req, res) => {
       try {
-         const { nome, cpf, telefone, cep, numero, complemento } = req.body;
+         let { nome, cpf, telefone, cep, numero, complemento } = req.body;
          cpf = limparNumero(cpf);
          telefone = limparNumero(telefone);
          cep = limparNumero(cep);

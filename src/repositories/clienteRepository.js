@@ -79,15 +79,20 @@ const clienteRepository = {
     },
 
 
-    selecionar: async () => {
-        const [rows] = await connection.execute(`SELECT * FROM clientes c 
-            INNER JOIN telefones t ON c.IdCliente = t.IdCliente
-            INNER JOIN enderecos e ON c.IdCliente = e.IdCliente
+    selecionar: async () => { //Faz uma consulta no banco utilizando clientes, telefones e endereços, usamos o inner join para ligar as tabelas atraves do id cliente
+        const [rows] = await connection.execute(`
+            SELECT  
+                *
+            FROM clientes AS c
+            INNER JOIN enderecos AS e
+                ON c.IdCliente = e.IdCliente
+            INNER JOIN telefones AS t 
+                ON c.IdCliente = t.IdCliente
         `);
         return rows;
     }
 
-    
+
 
 }
 export default clienteRepository;
